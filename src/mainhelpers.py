@@ -23,45 +23,37 @@ def parse_argumets():
     """
     parser = argparse.ArgumentParser(description="Show top rated books.")
     parser.add_argument(
-        "-t",
+        "--topic", "-t",
         dest="topic",
-        default=None,
-        help="Filter by topic."
+        help="filter by topic."
     )
     parser.add_argument(
-        "-r",
+        "--rating", "-r",
         dest="min_rating",
         type=float,
-        default=None,
-        help="Filter by minimum average rating."
+        help="filter by minimum average rating."
     )
     parser.add_argument(
-        "-c",
+        "--count", "-c",
         dest="min_count",
         type=int,
-        default=None,
-        help="Filter by minimum ratings count."
+        help="filter by minimum ratings count."
     )
     parser.add_argument(
-        "-s",
+        "--sort", "-s",
         dest="sort",
         choices=["rating", "pages", "ratings_count", "title", "reviews_count"],
         default="title",
-        help="If 1, perform aggregations."
+        help="sort by specified column."
     )
     parser.add_argument(
-        "-a",
+        "--aggregate", "-a",
         dest="aggregate",
         action="store_true",
-        help="If specified, perform aggregations."
+        help="perform aggregations."
     )
     parser.add_argument(
-        "--no-a",
-        dest="aggregate",
-        action="store_false",
-    )
-    parser.add_argument(
-        "-l",
+        "--list", "-l",
         dest="list",
         type=int,
         default=10,
