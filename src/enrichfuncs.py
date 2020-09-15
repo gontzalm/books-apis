@@ -19,7 +19,7 @@ def parse_oreilly(res):
         res (requests.models.Response): Response to parse.
 
     Returns:
-        data (pandas.DataFrame): Parsed data.
+        data (pd.DataFrame): Parsed data.
     """
     # Create DataFrame from HTTP response
     res = res.json()
@@ -48,11 +48,11 @@ def add_by_title(data, containing, limit=200):
     Add books by title from the O'Reilly Platform Search API.
 
     Args:
-        data (DataFrame): Dataset containing the books data.
+        data (pd.DataFrame): Dataset containing the books data.
         containing (str): Books whose title contains this word will be added to the data.
 
     Returns:
-        data (DataFrame): Updated dataset.
+        data (pd.DataFrame): Updated dataset.
     """
     # API setup
     base_url = "https://learning.oreilly.com"
@@ -94,7 +94,7 @@ def parse_stats(data, isbn, res):
     Parse a response returned by the Goodreads API with the endpoint "/book/review_counts" and add the info to the corresponding book.
 
     Args:
-        data (DataFrame): Dataset containing the books data.   
+        data (pd.DataFrame): Dataset containing the books data.   
         isbn (int): ISBN of the target book.
         res (requests.models.Response): Response to parse.
 
@@ -111,7 +111,7 @@ def add_review_stats(data):
     Add review stats ("Average Rating", "Ratings Count" and "Text Reviews Count") from the Goodreads API.
 
     Args:
-        data (DataFrame): Dataset containing the books data.
+        data (pd.DataFrame): Dataset containing the books data.
 
     Returns:
         None.
@@ -132,7 +132,7 @@ def add_review_stats(data):
     for isbn in isbns:
         params["isbns"] = str(isbn)
         res = requests.get(f"{base_url}{endpoint}", params=params)
-        if res.status_code != 404:
+        if res.status_code == 404:
             # drop rows without review stats, for better summary statistics
             data.drop(index=isbn, inplace=True) 
             continue
