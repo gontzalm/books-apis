@@ -20,7 +20,7 @@ The structure and contents of the project are as follows:
 - `main.py`: Main program to filter, sort and aggregate the books dataset.
 
 ## References
-1. *O'Reilly Platform Search API* [https://www.oreilly.com/online-learning/integration-docs/search.html](https://www.oreilly.com/online-learning/integration-docs/search.html)
-2. *Goodreads API* [https://www.goodreads.com/api](https://www.goodreads.com/api)
-3. `requests`: [https://requests.readthedocs.io/en/master/](https://requests.readthedocs.io/en/master/)
-4. `argparse`: [https://docs.python.org/3/library/argparse.html](https://docs.python.org/3/library/argparse.html)
+1. [*O'Reilly Platform Search API*](https://www.oreilly.com/online-learning/integration-docs/search.html)
+2. [*Goodreads API*](https://www.goodreads.com/api)
+3. [`requests`](https://requests.readthedocs.io/en/master/)
+4. [`argparse`](https://docs.python.org/3/library/argparse.html)
