@@ -23,7 +23,7 @@ The structure and contents of the project are as follows:
 ```bash
 main.py [-h] [--topic TOPIC] [--rating MIN_RATING] [--count MIN_COUNT] [--sort {rating,pages,ratings_count,title,reviews_count}] [--aggregate] [--list LIST]
 
-Show top rated books.
+Filter, sort, and potentially aggregate books dataset.
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -34,9 +34,9 @@ optional arguments:
   --count MIN_COUNT, -c MIN_COUNT
                         filter by minimum ratings count.
   --sort {rating,pages,ratings_count,title,reviews_count}, -s {rating,pages,ratings_count,title,reviews_count}
-                        sort by specified column.
+                        sort by specified column (default: title).
   --aggregate, -a       perform aggregations.
-  --list LIST, -l LIST  Number of books to list.
+  --list LIST, -l LIST  number of books to list (default: 10).
   ```
 Example:
 ```bash
