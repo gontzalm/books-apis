@@ -21,7 +21,9 @@ def parse_argumets():
     Returns:
         args: Parsed argments. 
     """
-    parser = argparse.ArgumentParser(description="Show top rated books.")
+    parser = argparse.ArgumentParser(
+        description="Filter, sort, and potentially aggregate books dataset."
+    )
     parser.add_argument(
         "--topic", "-t",
         dest="topic",
@@ -44,7 +46,7 @@ def parse_argumets():
         dest="sort",
         choices=["rating", "pages", "ratings_count", "title", "reviews_count"],
         default="title",
-        help="sort by specified column."
+        help="sort by specified column (default: title)."
     )
     parser.add_argument(
         "--aggregate", "-a",
@@ -57,7 +59,7 @@ def parse_argumets():
         dest="list",
         type=int,
         default=10,
-        help="Number of books to list."
+        help="number of books to list (default: 10)."
     )
     args = parser.parse_args()
     return args
