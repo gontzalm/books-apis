@@ -4,7 +4,7 @@ APIs project made in Ironhack August '20 cohort.
 ![](https://openmindapp.wpengine.com/wp-content/uploads/2017/11/library-cropped.jpg)
 
 ## Objective
-The objective of this project is to practice querying APIs via the `requests` module. The secondary objective is to learn how to use python's built-in `argparse` module that allows the user to pass arguments via the CLI.
+The objective of this project is to practice querying APIs via the `requests` module. The secondary objective is to learn how to use python's built-in `argparse` module, which allows the user to pass arguments via the CLI.
 
 In order to do so, a books dataset obtained from *kaggle.com* is used as a starting point. Then, this dataset is extended via the *O'Reilly Platform Search API* to include books on data science topics. Finally, the *Goodreads API* is used to obtain the review statistics of the added books.
 
@@ -17,7 +17,7 @@ The structure and contents of the project are as follows:
   1. `cleanfuncs.py`: Functions used in the cleaning process.
   2. `enreachfuncs.py`: Functions used in the enreaching process.
   3. `mainhelpers.py`: Functions used in the main program.
-- `main.py`: Main program to filter, sort and aggregate the books dataset.
+- `main.py`: Executable script to filter, sort and aggregate the books dataset via the CLI.
 
 ## References
 1. [*O'Reilly Platform Search API*](https://www.oreilly.com/online-learning/integration-docs/search.html)
