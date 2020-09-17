@@ -73,10 +73,10 @@ def load_books():
         None.
     
     Returns:
-        books (pd.DataFrame): Books dataset. 
+        data (pd.DataFrame): Books dataset. 
     """
-    books = pd.read_csv(DATASET_PATH, index_col="ISBN")
-    return books
+    data = pd.read_csv(DATASET_PATH, index_col="ISBN")
+    return data
 
 
 def filter_books(data, args):
@@ -88,7 +88,7 @@ def filter_books(data, args):
         args (parsed args): Parsed arguments.
     
     Returns:
-        books (pd.DataFrame): Books dataset. 
+        data (pd.DataFrame): Books dataset. 
     """
     if args.topic:
         topic = " ".join(args.topic.split("_"))
@@ -113,7 +113,7 @@ def sort_books(data, args):
         args (parsed args): Parsed arguments.
     
     Returns:
-        books (pd.DataFrame): Books dataset. 
+        data (pd.DataFrame): Books dataset. 
     """
     data.sort_values(SORT_DICT[args.sort], ascending=False, inplace=True)
     return data
@@ -127,7 +127,7 @@ def aggregate_books(data):
         data (pd.DataFrame): Books dataset.
     
     Returns:
-        books (pd.Series): Aggregated dataset. 
+        data (pd.Series): Aggregated dataset. 
     """
     data = data.describe()
     return data
