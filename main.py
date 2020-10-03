@@ -1,7 +1,6 @@
 #!/home/gontz/miniconda3/envs/ih/bin/python
-import pandas as pd
-import argparse
 import src.mainhelpers as mh
+
 
 def main():
     """Main execution program."""
