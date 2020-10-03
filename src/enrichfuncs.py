@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import requests
 
+
 load_dotenv()
 APIKEY = os.getenv("APIKEY") # api key neccessary for goodreads API
 REVIEW_COLS = ["Average Rating", "Ratings Count", "Text Reviews Count"]
